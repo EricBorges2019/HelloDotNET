@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.IO;
+Action<string> printf = Console.WriteLine;
 
 
 Console.WriteLine("Hello, World!");
@@ -16,7 +17,7 @@ while (conInput != "q" && conInput != "Q")
 {
     if (conInput == "f" || conInput == "F")
     {
-        Console.WriteLine("Type something in for me to write to a file:");
+        printf("Type something in for me to write to a file:");
         string fileInput = Console.ReadLine();
 
 
@@ -25,7 +26,7 @@ while (conInput != "q" && conInput != "Q")
 
         File.WriteAllText(path, fileInput);
 
-        Console.WriteLine("In the file: " + path + " you wrote " + fileInput + "!");
+        printf("In the file: " + path + " you wrote " + fileInput + "!");
         
     }
 
