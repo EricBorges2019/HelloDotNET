@@ -10,24 +10,26 @@ Console.WriteLine("Q to quit.");
 string conInput = Console.ReadLine();
 //conInput is the console input at the start of the program
 
-if (conInput == "q" || conInput == "Q")
-// OR operator isn't recognized by compiler???
+while (conInput != "q" && conInput != "Q")
+
+
 {
-    Console.WriteLine("Quitting...");
-    return 0;
-}
     if (conInput == "f" || conInput == "F")
-{
-    Console.WriteLine("Type something in for me to write to a file:");
-    string fileInput = Console.ReadLine();
+    {
+        Console.WriteLine("Type something in for me to write to a file:");
+        string fileInput = Console.ReadLine();
 
 
 
-    string path = "output.txt";
+        string path = "output.txt";
 
-    File.WriteAllText(path, fileInput);
+        File.WriteAllText(path, fileInput);
 
-    Console.WriteLine("In the file: " + path + " you wrote " + fileInput + "!");
-    Console.WriteLine("Quitting...");
+        Console.WriteLine("In the file: " + path + " you wrote " + fileInput + "!");
+        
+    }
+
+
+
 }
 return 0;
